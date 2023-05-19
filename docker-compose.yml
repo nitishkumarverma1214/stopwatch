@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    image: react/stopwatch
+    ports:
+      - 8080:8080
