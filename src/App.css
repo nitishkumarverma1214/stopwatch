@@ -1,0 +1,83 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  border: 2px solid #f7f7f7;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  height: 14rem;
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  margin-bottom: 2rem;
+
+  -webkit-box-shadow: 0px 10px 7px 0px #088395;
+  -moz-box-shadow: 0px 10px 7px 0px #088395;
+  box-shadow: 0px 10px 7px 0px #088395;
+}
+.clock__inner-ring {
+  border: 4px dotted white;
+  border-radius: 50%;
+  padding: 2.5rem;
+  height: 12.5rem;
+  width: 12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 1s infinite alternate;
+}
+
+@keyframes spin {
+  0% {
+    border-top-color: #0a4d68;
+  }
+  25% {
+    border-right-color: #088395;
+  }
+  50% {
+    border-bottom-color: #05bfdb;
+  }
+
+  100% {
+    border-left-color: #00ffca;
+  }
+}
+
+.clock__time {
+  font-size: 2rem;
+}
+
+.clock_time--second,
+.clock_time--ms {
+  color: #6da9e4;
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.button-container > button:focus {
+  outline-color: transparent;
+}
