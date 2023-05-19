@@ -1,7 +1,9 @@
 version: '3'
 
 services:
-  web:
-    image: react/stopwatch
+  react-stopwatch:
+    container_name: react_stopwatch
+    build: .
+    # nginx default port is 80(right side)
     ports:
-      - 8080:8080
+      - 80:80
